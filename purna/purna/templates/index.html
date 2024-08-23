@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Description</title>
+</head>
+<body>
+    <h1>Enter Image URL</h1>
+    <form method="POST">
+        <input type="text" name="image_url" placeholder="Enter Image URL">
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if description and emotion %}
+        <h2>Description: {{ description }}</h2>
+        <h3>Emotion: {{ emotion }}</h3>
+    {% endif %}
+</body>
+</html>
